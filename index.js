@@ -107,3 +107,47 @@ const fakeFetch = (msg, shouldReject) => {
 
 // syncCallsToServer('1', '2');
 //{data: 'from server: 1', data2: 'from server: 2'}
+
+//async await
+
+// async function printDataFromServer() {
+//   const serverData = await anyPromiseWhichWillReturnData() // .then(data => { sksksksksksk(), sjskssks()})
+//   console.log(serverData);
+// }
+
+// notice that function need an `async` keyword.
+
+// Doing this in es6 arrow function would be
+
+// const printDataFromServer = async () => {
+// 	try {
+// 		const serverData = await anyPromiseWhichWillReturnData();
+// 	  console.log(serverData);
+// 	} catch (err) {
+// 	 console.error(err)
+// 	}
+// }
+
+/**
+Note: In arrow the async keyword is used before the ().
+While in normal functions, it is used before the `function` keyword itself.
+**/
+
+//live eg
+
+// const getData = async () => {
+//   const data = await fakeFetch('hinanshi');
+//   console.log(data);
+// };
+
+// getData();
+
+//16 - do eg 14 with async await
+
+// const syncCallsToServer = async (msg1, msg2) => {
+//   const data1 = await fakeFetch(msg1);
+//   const data2 = await fakeFetch(msg2);
+//   console.log({ data1, data2 });
+// };
+
+// syncCallsToServer('1', '2');
