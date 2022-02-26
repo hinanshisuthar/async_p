@@ -37,3 +37,16 @@ import './style.css';
 // const myTimeout = setTimeout(myGreeting, 0);
 
 //setTimeout(fn, 0) is used when one needs to do calculation when the callstack is empty. Therefore here, there is no blocking of render.
+
+//4
+// setTimeout(() => console.log('A'), 0)
+// setTimeout(() => console.log('C'), 0)
+// setTimeout(() => console.log('B'), 0)
+
+// setTimeout(() => console.log('A'), 1000);
+// setTimeout(() => console.log('B'), 400);
+// setTimeout(() => console.log('C'), 1300);
+
+// console.log('A');
+// setTimeout(() => console.log('B'), 0);
+// console.log('C');
