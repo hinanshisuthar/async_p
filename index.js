@@ -50,3 +50,10 @@ import './style.css';
 // console.log('A');
 // setTimeout(() => console.log('B'), 0);
 // console.log('C');
+
+//4
+// const myGreeting = () => {
+//   console.log('henlo jhonu');
+// };
+// console.log('henlo jhonu 1');
+// const myTimeout = setInterval(myGreeting, 0)
