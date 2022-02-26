@@ -57,3 +57,53 @@ import './style.css';
 // };
 // console.log('henlo jhonu 1');
 // const myTimeout = setInterval(myGreeting, 0)
+
+// promises
+
+const fakeFetch = (msg, shouldReject) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldReject) {
+        reject(`error from server: ${msg}`);
+      }
+      resolve(`from server: ${msg}`);
+    }, 2000);
+  });
+};
+
+// fakeFetch('Hinanshi is cool');
+// fakeFetch('Hinanshi is sexy', true);
+
+// fakeFetch("Hinanshi Is Hot").then(data => console.log(data));
+
+// fakeFetch("Hinanshi Is Best").then(data => console.log(data)).catch(err => console.error(err));
+
+// fakeFetch("Hinanshi Is Best", true).then(data => console.log(data)).catch(err => console.error(err));
+
+//return length of  message
+
+// const getServerResponseLength = (msg) => {
+//   fakeFetch(msg).then((data) => printLength(msg));
+// };
+
+// const printLength = (nameLength) => nameLength.length;
+
+// getServerResponseLength('hinanshi');
+
+// const syncCallsToServer = (msg1, msg2) =>
+//   fakeFetch(msg1).then((data) =>
+//     fakeFetch(msg2).then((data2) => console.log(data2))
+//   );
+
+// syncCallsToServer('1', '2');
+//from server: 2
+
+// return both dataFrom1 and dataFrom2. for eg user id and orders
+
+// const syncCallsToServer = (msg1, msg2) =>
+//   fakeFetch(msg1).then((data) =>
+//     fakeFetch(msg2).then((data2) => console.log({ data, data2 }))
+//   );
+
+// syncCallsToServer('1', '2');
+//{data: 'from server: 1', data2: 'from server: 2'}
